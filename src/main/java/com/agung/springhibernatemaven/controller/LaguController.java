@@ -27,11 +27,16 @@ public class LaguController {
     public void setLaguService(LaguService laguService){
         this.laguService=laguService;
     }
-    
     @RequestMapping(value = "/",method = RequestMethod.GET)
     public String index(Model model){
-        model.addAttribute("lagus", laguService.getLagus());
+        //model.addAttribute("lagus", laguService.getLagus());
         return "index";
+    }
+    
+    @RequestMapping(value = "lagu",method = RequestMethod.GET)
+    public String lagu(Model model){
+        model.addAttribute("lagus", laguService.getLagus());
+        return "lagu";
     }
     
     @RequestMapping(value = "tambah",method = RequestMethod.GET)
@@ -43,7 +48,7 @@ public class LaguController {
     @RequestMapping(value = "tambah",method = RequestMethod.POST)
     public String adding(@ModelAttribute("lagu") Lagu lagu){
         laguService.saveLagu(lagu);
-        return "redirect:/";
+        return "redirect:/lagu";
     }
     
     @RequestMapping(value = "edit/{id}",method = RequestMethod.GET)
@@ -59,7 +64,7 @@ public class LaguController {
     @RequestMapping(value = "edit",method = RequestMethod.POST)
     public String editing(@ModelAttribute("lagu") Lagu lagu){
         laguService.updateLagu(lagu);
-        return "redirect:/";
+        return "redirect:/lagu";
     }
     
     @RequestMapping(value = "delete/{id}",method = RequestMethod.GET)
@@ -69,7 +74,7 @@ public class LaguController {
             throw new NotFoundException();
         }
         laguService.deleteLagu(lagu);
-        return "redirect:/";
+        return "redirect:/lagu";
     }
     
     @RequestMapping(value = "pdf",method = RequestMethod.GET)

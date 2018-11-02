@@ -32,23 +32,23 @@
         </style>
     </head>
     <body>
-        <h1>Tambah Playlist</h1>
-        <form:form modelAttribute="lagu" action="${pageContext.request.contextPath}/tambah" method="post">
+        <h1>Tambah Jenis Cuti</h1>
+        <form:form modelAttribute="jeniscuti" action="${pageContext.request.contextPath}/tambah2" method="post">
             <table>
                 <tr>
-                    <td>Judul</td>
+                    <td>Nama</td>
                     <td>:</td>
-                    <td><form:input path="judul" /></td>
+                    <td><form:input path="nama" /></td>
                 </tr>
                 <tr>
-                    <td>Penyanyi</td>
+                    <td>Deskripsi</td>
                     <td>:</td>
-                    <td><form:input path="penyanyi" /></td>
+                    <td><form:input path="deskripsi" /></td>
                 </tr>
                 <tr>
-                    <td>Pencipta</td>
+                    <td>Lama</td>
                     <td>:</td>
-                    <td><form:input path="pencipta" /></td>
+                    <td><form:input path="lama" /></td>
                 </tr>
                 <tr>
                     <td><input type="submit" value="Simpan" /></td>
