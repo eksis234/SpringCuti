@@ -6,7 +6,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Daftar Lagu</title>
+        <title>Latihan Spring</title>
         
         <style type="text/css">
             h1{
@@ -54,36 +54,31 @@
             }
         </style>
     </head>
-    <body>
-        <h1>Playlist</h1>
+    <body>   
+        <!-- Lagu -->
+        <h1>Lagu</h1>
         <div id="buttonTambah">
-            <a href="${pageContext.request.contextPath}/tambah">Tambah</a>
+            <a href="${pageContext.request.contextPath}/lagu">Lagu</a>
+        </div> 
+        <!-- departemen -->
+        <h1>Departemen</h1>
+        <div id="buttonTambah">
+            <a href="${pageContext.request.contextPath}/dept">Departemen</a>
         </div>
-        
-        <table id="table">
-            <thead>
-                <tr>
-                    <th>id</th>
-                    <th>judul</th>
-                    <th>penyanyi</th>
-                    <th>pencipta</th>
-                    <th>Opsi</th>
-                </tr>
-            </thead>
-            <tbody>
-                <c:forEach items="${lagus}" var="lagu">
-                <tr>
-                    <td><c:out value="${lagu.id}" /></td>
-                    <td><c:out value="${lagu.judul}" /></td>
-                    <td><c:out value="${lagu.penyanyi}" /></td>
-                    <td><c:out value="${lagu.pencipta}" /></td>
-                    <td><a href="${pageContext.request.contextPath}/edit/${lagu.id}">Edit</a> | 
-                        <a href="${pageContext.request.contextPath}/delete/${lagu.id}">Delete</a>
-                    </td>
-                </tr>
-                </c:forEach>
-            </tbody>
-        </table>
-        
+        <!-- JenisCuti -->
+        <h1>Jenis Cuti</h1>
+        <div id="buttonTambah">
+            <a href="${pageContext.request.contextPath}/jcuti">Jenis Cuti</a>
+        </div> 
+        <!-- Role -->
+        <h1>Role</h1>
+        <div id="buttonTambah">
+            <a href="${pageContext.request.contextPath}/role">Role</a>
+        </div> 
+        <!-- Karyawan -->
+        <h1>Karyawan</h1>
+        <div id="buttonTambah">
+            <a href="${pageContext.request.contextPath}/karyawan">Role</a>
+        </div> 
     </body>
 </html>
