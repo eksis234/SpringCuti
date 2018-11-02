@@ -34,51 +34,61 @@
     <body>
         <h1>Tambah Karyawan</h1>
         <form:form modelAttribute="karyawan" action="${pageContext.request.contextPath}/tambah4" method="post">
-            <table>
+            <table> 
                 <tr>
                     <td>Nama</td>
                     <td>:</td>
                     <td><form:input path="nama" /></td>
                 </tr>
                 <tr>
-                    <td>Deskripsi</td>
+                    <td>No Hp</td>
                     <td>:</td>
-                    <td><form:input path="deskripsi" /></td>
+                    <td><form:input path="nohp" /></td>
                 </tr>
                 <tr>
-                    <td>Lama</td>
+                    <td>Email</td>
                     <td>:</td>
-                    <td><form:input path="lama" /></td>
+                    <td><form:input path="email" /></td>
                 </tr>
                 <tr>
-                    <td>Nama</td>
+                    <td>Awal Masuk Kerja</td>
                     <td>:</td>
-                    <td><form:input path="nama" /></td>
+                    <td><form:input path="awalgbg" /></td>
                 </tr>
                 <tr>
-                    <td>Deskripsi</td>
+                    <td>Id Departemen</td>
                     <td>:</td>
-                    <td><form:input path="deskripsi" /></td>
+                    <td><form:input path="iddept" /></td>
                 </tr>
                 <tr>
-                    <td>Lama</td>
+                    <td>Id Manager</td>
                     <td>:</td>
-                    <td><form:input path="lama" /></td>
+                    <td><form:input path="idmail" /></td>
                 </tr>
                 <tr>
-                    <td>Nama</td>
+                    <td>Password</td>
                     <td>:</td>
-                    <td><form:input path="nama" /></td>
+                    <td><form:input path="katasandi" /></td>
                 </tr>
                 <tr>
-                    <td>Deskripsi</td>
+                    <td>Sisa Cuti</td>
                     <td>:</td>
-                    <td><form:input path="deskripsi" /></td>
+                    <td><form:input path="sisacuti" /></td>
                 </tr>
                 <tr>
-                    <td>Lama</td>
+                    <td>Banyak Cuti</td>
                     <td>:</td>
-                    <td><form:input path="lama" /></td>
+                    <td><form:input path="bnykcuti" /></td>
+                </tr>
+                <tr>
+                    <td>Status</td>
+                    <td>:</td>
+                    <td><form:input path="status" /></td>
+                </tr>
+                <tr>
+                    <td>Id Role</td>
+                    <td>:</td>
+                    <td><form:input path="idrole" /></td>
                 </tr>
                 <tr>
                     <td><input type="submit" value="Simpan" /></td>

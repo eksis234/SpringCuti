@@ -32,23 +32,63 @@
     </head>
     <body>
         <h1>Edit</h1>
-        <form:form modelAttribute="jeniscuti" action="${pageContext.request.contextPath}/edit2" method="post">
+        <form:form modelAttribute="karyawan" action="${pageContext.request.contextPath}/edit4" method="post">
             <table>
                 <form:hidden path="id" />
                 <tr>
                     <td>Nama</td>
                     <td>:</td>
-                    <td><form:input path="nama" value="${jeniscuti.nama}"/></td>
+                    <td><form:input path="nama" value="${karyawan.nama}"/></td>
                 </tr>
                 <tr>
-                    <td>Deskripsi</td>
+                    <td>No Hp</td>
                     <td>:</td>
-                    <td><form:input path="deskripsi" value="${jeniscuti.deskripsi}" /></td>
+                    <td><form:input path="nohp" value="${karyawan.nohp}" /></td>
                 </tr>
                 <tr>
-                    <td>Lama</td>
+                    <td>Email</td>
                     <td>:</td>
-                    <td><form:input path="lama" value="${jeniscuti.lama}" /></td>
+                    <td><form:input path="email" value="${karyawan.email}" /></td>
+                </tr>
+                <tr>
+                    <td>Awal Gabung</td>
+                    <td>:</td>
+                    <td><form:input path="eawalgbg" value="${karyawan.awalgbg}" /></td>
+                </tr>
+                <tr>
+                    <td>Id Departemen</td>
+                    <td>:</td>
+                    <td><form:input path="iddept" value="${karyawan.iddept}" /></td>
+                </tr>
+                <tr>
+                    <td>Id Manager</td>
+                    <td>:</td>
+                    <td><form:input path="idmail" value="${karyawan.idmail}" /></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td>:</td>
+                    <td><form:input path="katasandi" value="${karyawan.katasandi}" /></td>
+                </tr>
+                <tr>
+                    <td>Sisa Cuti</td>
+                    <td>:</td>
+                    <td><form:input path="sisacuti" value="${karyawan.sisacuti}" /></td>
+                </tr>
+                <tr>
+                    <td>Banyak Cuti</td>
+                    <td>:</td>
+                    <td><form:input path="bnykcuti" value="${karyawan.bnykcuti}" /></td>
+                </tr>
+                <tr>
+                    <td>Status</td>
+                    <td>:</td>
+                    <td><form:input path="status" value="${karyawan.status}" /></td>
+                </tr>
+                <tr>
+                    <td>Id Role</td>
+                    <td>:</td>
+                    <td><form:input path="idrole" value="${karyawan.idrole}" /></td>
                 </tr>
                 <tr>
                     <td><input type="submit" value="Simpan" /></td>

@@ -89,17 +89,17 @@
                 <c:forEach items="${karyawans}" var="karyawan">
                 <tr>
                     <td><c:out value="${karyawan.id}" /></td>
-                    <td><c:out value="${jeniscuti.nama}" /></td>
-                    <td><c:out value="${jeniscuti.nohp}" /></td>
-                    <td><c:out value="${jeniscuti.email}" /></td>
+                    <td><c:out value="${karyawan.nama}" /></td>
+                    <td><c:out value="${karyawan.nohp}" /></td>
+                    <td><c:out value="${karyawan.email}" /></td>
                     <td><c:out value="${karyawan.awalgbg}" /></td>
-                    <td><c:out value="${jeniscuti.iddept}" /></td>
-                    <td><c:out value="${jeniscuti.idmail}" /></td>
-                    <td><c:out value="${jeniscuti.katasandi}" /></td>
+                    <td><c:out value="${karyawan.iddept}" /></td>
+                    <td><c:out value="${karyawan.idmail}" /></td>
+                    <td><c:out value="${karyawan.katasandi}" /></td>
                     <td><c:out value="${karyawan.sisacuti}" /></td>
-                    <td><c:out value="${jeniscuti.bnykcuti}" /></td>
-                    <td><c:out value="${jeniscuti.status}" /></td>
-                    <td><c:out value="${jeniscuti.idrole}" /></td>
+                    <td><c:out value="${karyawan.bnykcuti}" /></td>
+                    <td><c:out value="${karyawan.status}" /></td>
+                    <td><c:out value="${karyawan.idrole}" /></td>
                     <td><a href="${pageContext.request.contextPath}/edit4/${karyawan.id}">Edit</a> | 
                         <a href="${pageContext.request.contextPath}/delete4/${karyawan.id}">Delete</a>
                     </td>

@@ -78,7 +78,7 @@
         <!-- Karyawan -->
         <h1>Karyawan</h1>
         <div id="buttonTambah">
-            <a href="${pageContext.request.contextPath}/karyawan">Role</a>
+            <a href="${pageContext.request.contextPath}/karyawan">Karyawan</a>
         </div> 
     </body>
 </html>
