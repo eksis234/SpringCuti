@@ -6,10 +6,15 @@
 package com.agung.springhibernatemaven.model;
 
 import java.util.Date;
+import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
@@ -19,6 +24,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "KARYAWAN")
 public class Karyawan {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
@@ -26,13 +32,16 @@ public class Karyawan {
     private String nohp;
     private String email;
     private Date awalgbg;
-    private Integer iddept;
-    private Integer idmail;
+    @JoinColumn(name = "idDepartemen", referencedColumnName = "id")
+    @ManyToOne(optional = false)
+    private Departemen idDepartemen;
     private String katasandi;
     private Integer sisacuti;
     private Integer bnykcuti;
     private String status;
-    private Integer idrole;
+    @JoinColumn(name = "idDRole", referencedColumnName = "id")
+    @ManyToOne(optional = false)
+    private Role idDRole;
 
     public Integer getId() {
         return id;
@@ -73,23 +82,7 @@ public class Karyawan {
     public void setAwalgbg(Date awalgbg) {
         this.awalgbg = awalgbg;
     }
-
-    public Integer getIddept() {
-        return iddept;
-    }
-
-    public void setIddept(Integer iddept) {
-        this.iddept = iddept;
-    }
-
-    public Integer getIdmail() {
-        return idmail;
-    }
-
-    public void setIdmail(Integer idmail) {
-        this.idmail = idmail;
-    }
-
+    
     public String getKatasandi() {
         return katasandi;
     }
@@ -120,13 +113,5 @@ public class Karyawan {
 
     public void setStatus(String status) {
         this.status = status;
-    }
-
-    public Integer getIdrole() {
-        return idrole;
-    }
-
-    public void setIdrole(Integer idrole) {
-        this.idrole = idrole;
     }
 }

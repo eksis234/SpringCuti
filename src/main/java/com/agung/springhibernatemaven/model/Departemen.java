@@ -21,6 +21,8 @@ public class Departemen {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
+    private String nama;
+    private Integer idManager;
 
     public Integer getId() {
         return id;
@@ -37,5 +39,5 @@ public class Departemen {
     public void setNama(String nama) {
         this.nama = nama;
     }
-    private String nama;
+    
 }
