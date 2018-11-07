@@ -1,3 +1,9 @@
+<%-- 
+    Document   : berkascuti
+    Created on : Nov 2, 2018, 4:32:16 PM
+    Author     : Martin
+--%>
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
@@ -54,35 +60,35 @@
             }
         </style>
     </head>
-    <body>   
-        <!-- Lagu -->
-        <h1>Lagu</h1>
+    <body>
+        <!-- role -->
+               <h1>Role</h1>
         <div id="buttonTambah">
-            <a href="${pageContext.request.contextPath}/lagu">Lagu</a>
-        </div> 
-        <!-- departemen -->
-        <h1>Departemen</h1>
-        <div id="buttonTambah">
-            <a href="${pageContext.request.contextPath}/dept">Departemen</a>
+            <a href="${pageContext.request.contextPath}/tambah3">Tambah</a>
         </div>
-        <!-- JenisCuti -->
-        <h1>Jenis Cuti</h1>
-        <div id="buttonTambah">
-            <a href="${pageContext.request.contextPath}/jcuti">Jenis Cuti</a>
-        </div> 
-        <!-- Role -->
-        <h1>Role</h1>
-        <div id="buttonTambah">
-            <a href="${pageContext.request.contextPath}/role">Role</a>
-        </div> 
-        <!-- Karyawan -->
-        <h1>Karyawan</h1>
-        <div id="buttonTambah">
-            <a href="${pageContext.request.contextPath}/karyawan">Karyawan</a>
-        </div>
-        <h1>Berkas Cuti</h1>
-        <div id="buttonTambah">
-            <a href="${pageContext.request.contextPath}/berkascuti">Berkas Cuti</a>
-        </div>
+        
+        <table id="table">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>id Departemen</th>
+                    <th>lokasi</th>
+                    <th>Opsi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <c:forEach items="${berkasCutis}" var="berkasCuti">
+                <tr>
+                    <td><c:out value="${berkasCuti.id}" /></td>
+                    <td><c:out value="${berkasCuti.idDept}" /></td>
+                    <td><c:out value="${berkasCuti.lokasiBerkas}" /></td>
+                    <td><a href="${pageContext.request.contextPath}/edit3/${berkasCuti.id}">Edit</a> | 
+                        <a href="${pageContext.request.contextPath}/delete3/${berkasCuti.id}">Delete</a> 
+                        
+                    </td>
+                </tr>
+                </c:forEach>
+            </tbody>
+        </table>
     </body>
 </html>
