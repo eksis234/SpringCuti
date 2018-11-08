@@ -71,6 +71,7 @@
                 <tr>
                     <th>id</th>
                     <th>nama</th>
+                    <th>Id Manager</th>
                     <th>Opsi</th>
                 </tr>
             </thead>
@@ -79,6 +80,7 @@
                 <tr>
                     <td><c:out value="${departemen.id}" /></td>
                     <td><c:out value="${departemen.nama}" /></td>
+                    <td><c:out value="${departemen.idManager}" /></td>
                     <td><a href="${pageContext.request.contextPath}/edit1/${departemen.id}">Edit</a> | 
                         <a href="${pageContext.request.contextPath}/delete1/${departemen.id}">Delete</a>
                     </td>

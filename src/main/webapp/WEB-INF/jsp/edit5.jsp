@@ -44,12 +44,12 @@
                 <tr>
                     <td>ID Departemen</td>
                     <td>:</td>
-                    <td><form:input path="idDept" value="${berkasCuti.idDept}"/></td>
+                    <td><form:input path="idPermohonan" value="${berkascuti.idPermohonan}"/></td>
                 </tr>
                 <tr>
                     <td>Lokasi Berkas</td>
                     <td>:</td>
-                    <td><form:input path="lokasiBerkas" value="${berkasCuti.lokasiBerkas}" /></td>
+                    <td><form:input path="lokasiBerkas" value="${berkascuti.lokasiBerkas}" /></td>
                 </tr>
             </table>
     </form:form>

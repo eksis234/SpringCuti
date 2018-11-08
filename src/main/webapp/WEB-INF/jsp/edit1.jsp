@@ -32,23 +32,18 @@
     </head>
     <body>
         <h1>Edit</h1>
-        <form:form modelAttribute="lagu" action="${pageContext.request.contextPath}/edit" method="post">
+        <form:form modelAttribute="departemen" action="${pageContext.request.contextPath}/edit1" method="post">
             <table>
                 <form:hidden path="id" />
                 <tr>
-                    <td>Judul</td>
+                    <td>Nama Departemen</td>
                     <td>:</td>
-                    <td><form:input path="judul" value="${lagu.judul}"/></td>
+                    <td><form:input path="nama" value="${departemen.nama}"/></td>
                 </tr>
                 <tr>
-                    <td>Penyanyi</td>
+                    <td>Id Manager</td>
                     <td>:</td>
-                    <td><form:input path="penyanyi" value="${lagu.penyanyi}" /></td>
-                </tr>
-                <tr>
-                    <td>Pencipta</td>
-                    <td>:</td>
-                    <td><form:input path="pencipta" value="${lagu.pencipta}" /></td>
+                    <td><form:input path="idManager" value="${departemen.idManager}" /></td>
                 </tr>
                 <tr>
                     <td><input type="submit" value="Simpan" /></td>

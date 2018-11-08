@@ -35,6 +35,22 @@ public class Karyawan {
     @JoinColumn(name = "idDepartemen", referencedColumnName = "id")
     @ManyToOne(optional = false)
     private Departemen idDepartemen;
+
+    public Departemen getIdDepartemen() {
+        return idDepartemen;
+    }
+
+    public void setIdDepartemen(Departemen idDepartemen) {
+        this.idDepartemen = idDepartemen;
+    }
+
+    public Role getIdDRole() {
+        return idDRole;
+    }
+
+    public void setIdDRole(Role idDRole) {
+        this.idDRole = idDRole;
+    }
     private String katasandi;
     private Integer sisacuti;
     private Integer bnykcuti;

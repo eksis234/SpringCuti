@@ -33,6 +33,12 @@ public class KaryawanController {
         this.karyawanService = karyawanService;
     }
     
+    @RequestMapping(value = "/",method = RequestMethod.GET)
+    public String index(Model model){
+        //model.addAttribute("lagus", laguService.getLagus());
+        return "index";
+    }
+    
     @RequestMapping(value = "karyawan",method = RequestMethod.GET)
     public String karyawan(Model model){
         model.addAttribute("karyawans", karyawanService.getKaryawans());

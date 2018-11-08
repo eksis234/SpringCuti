@@ -9,62 +9,46 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 /**
  *
- * @author Martin
+ * @author Lenovo
  */
-
 @Entity
 @Table(name = "BERKASCUTI")
 public class BerkasCuti {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
-    private Integer idDept;
-    private String lokasiBerkas;
+    private Integer idBCuti;
 
-    /**
-     * @return the id
-     */
-    public Integer getId() {
-        return id;
+    public Integer getIdBCuti() {
+        return idBCuti;
     }
 
-    /**
-     * @param id the id to set
-     */
-    public void setId(Integer id) {
-        this.id = id;
+    public void setIdBCuti(Integer idBCuti) {
+        this.idBCuti = idBCuti;
     }
 
-    /**
-     * @return the idDept
-     */
-    public Integer getIdDept() {
-        return idDept;
+    public JenisCuti getIdJCuti() {
+        return idJCuti;
     }
 
-    /**
-     * @param idDept the idDept to set
-     */
-    public void setIdDept(Integer idDept) {
-        this.idDept = idDept;
+    public void setIdJCuti(JenisCuti idJCuti) {
+        this.idJCuti = idJCuti;
     }
 
-    /**
-     * @return the lokasiBerkas
-     */
     public String getLokasiBerkas() {
         return lokasiBerkas;
     }
 
-    /**
-     * @param lokasiBerkas the lokasiBerkas to set
-     */
     public void setLokasiBerkas(String lokasiBerkas) {
         this.lokasiBerkas = lokasiBerkas;
     }
-    
+    @JoinColumn(name = "idJCuti", referencedColumnName = "id")
+    @ManyToOne(optional = false)
+    private JenisCuti idJCuti;
+    private String lokasiBerkas;
 }

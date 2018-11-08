@@ -40,4 +40,11 @@ public class Departemen {
         this.nama = nama;
     }
     
+    public Integer getIdManager() {
+        return idManager;
+    }
+
+    public void setIdManager(Integer idManager) {
+        this.idManager = idManager;
+    }
 }

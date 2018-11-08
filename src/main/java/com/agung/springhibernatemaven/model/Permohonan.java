@@ -91,4 +91,19 @@ public class Permohonan {
         this.status = status;
     }
 
+    public JenisCuti getIdCuti() {
+        return idCuti;
+    }
+
+    public void setIdCuti(JenisCuti idCuti) {
+        this.idCuti = idCuti;
+    }
+
+    public Karyawan getIdKaryawan() {
+        return idKaryawan;
+    }
+
+    public void setIdKaryawan(Karyawan idKaryawan) {
+        this.idKaryawan = idKaryawan;
+    }
 }

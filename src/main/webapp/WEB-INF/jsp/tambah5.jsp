@@ -1,11 +1,12 @@
 <%-- 
-    Document   : tambah1
-    Created on : Oct 29, 2018, 3:26:50 PM
+    Document   : tambah5
+    Created on : Nov 7, 2018, 2:20:03 PM
     Author     : Lenovo
 --%>
 
 <%@page contentType="text/html" pageEncoding="windows-1252"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -37,21 +38,18 @@
         </style>
     </head>
     <body>
-        <h1>Tambah Departemen</h1>
-        <form:form modelAttribute="departemen" action="${pageContext.request.contextPath}/tambah1" method="post">
-            <table>
+        <h1>Tambah Berkas Cuti</h1>
+        <form:form modelAttribute="berkascuti" action="${pageContext.request.contextPath}/tambah5" method="post">
+            <table> 
                 <tr>
-                    <td>Nama</td>
+                    <td>Id Permohonan</td>
                     <td>:</td>
-                    <td><form:input path="nama" /></td>
+                    <td><form:input path="idPermohonan" /></td>
                 </tr>
                 <tr>
-                    <td>Id Manager</td>
+                    <td>Lokasi Berkas</td>
                     <td>:</td>
-                    <td><form:input path="idManager" /></td>
-                </tr>
-                <tr>
-                    <td><input type="submit" value="Simpan" /></td>
+                    <td><form:input path="LokasiBerkas" /></td>
                 </tr>
             </table>
     </form:form>

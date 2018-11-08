@@ -1,3 +1,9 @@
+<%-- 
+    Document   : edit6
+    Created on : Nov 8, 2018, 3:04:01 PM
+    Author     : Lenovo
+--%>
+
 <%@page contentType="text/html" pageEncoding="windows-1252"%>
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
@@ -32,58 +38,43 @@
     </head>
     <body>
         <h1>Edit</h1>
-        <form:form modelAttribute="karyawan" action="${pageContext.request.contextPath}/edit4" method="post">
+        <form:form modelAttribute="permohonan" action="${pageContext.request.contextPath}/edit6" method="post">
             <table>
-                <form:hidden path="id" />
+                <form:hidden path="idPermohonan" />
                 <tr>
-                    <td>Nama</td>
+                    <td>Id Karyawan</td>
                     <td>:</td>
-                    <td><form:input path="nama" value="${karyawan.nama}"/></td>
+                    <td><form:input path="idKaryawan" value="${permohonan.idKaryawan.id}"/></td>
                 </tr>
                 <tr>
-                    <td>No Hp</td>
+                    <td>Id Cuti</td>
                     <td>:</td>
-                    <td><form:input path="nohp" value="${karyawan.nohp}" /></td>
+                    <td><form:input path="idCuti" value="${permohonan.idCuti.id}"/></td>
                 </tr>
                 <tr>
-                    <td>Email</td>
+                    <td>Tanggal Submit</td>
                     <td>:</td>
-                    <td><form:input path="email" value="${karyawan.email}" /></td>
+                    <td><form:input path="tglSubmit" value="${permohonan.tglSubmit}" /></td>
                 </tr>
                 <tr>
-                    <td>Awal Gabung</td>
+                    <td>Mulai Cuti</td>
                     <td>:</td>
-                    <td><form:input path="awalgbg" value="${karyawan.awalgbg}" /></td>
+                    <td><form:input path="mulaiCuti" value="${permohonan.mulaiCuti}" /></td>
                 </tr>
                 <tr>
-                    <td>Id Departemen</td>
+                    <td>Selesai Cuti</td>
                     <td>:</td>
-                    <td><form:input path="idDepartemen" value="${karyawan.idDepartemen.id}" /></td>
+                    <td><form:input path="selesaiCuti" value="${permohonan.selesaiCuti}" /></td>
                 </tr>
                 <tr>
-                    <td>Password</td>
+                    <td>Catatan </td>
                     <td>:</td>
-                    <td><form:input path="katasandi" value="${karyawan.katasandi}" /></td>
-                </tr>
-                <tr>
-                    <td>Sisa Cuti</td>
-                    <td>:</td>
-                    <td><form:input path="sisacuti" value="${karyawan.sisacuti}" /></td>
-                </tr>
-                <tr>
-                    <td>Banyak Cuti</td>
-                    <td>:</td>
-                    <td><form:input path="bnykcuti" value="${karyawan.bnykcuti}" /></td>
+                    <td><form:input path="catatan" value="${permohonan.catatan}" /></td>
                 </tr>
                 <tr>
                     <td>Status</td>
                     <td>:</td>
-                    <td><form:input path="status" value="${karyawan.status}" /></td>
-                </tr>
-                <tr>
-                    <td>Id Role</td>
-                    <td>:</td>
-                    <td><form:input path="idDRole" value="${karyawan.idDRole.id}" /></td>
+                    <td><form:input path="status" value="${permohonan.status}" /></td>
                 </tr>
                 <tr>
                     <td><input type="submit" value="Simpan" /></td>
@@ -92,3 +83,4 @@
     </form:form>
     </body>
 </html>
+

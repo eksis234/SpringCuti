@@ -27,11 +27,11 @@ public class LaguController {
     public void setLaguService(LaguService laguService){
         this.laguService=laguService;
     }
-    @RequestMapping(value = "/",method = RequestMethod.GET)
-    public String index(Model model){
-        //model.addAttribute("lagus", laguService.getLagus());
-        return "index";
-    }
+//    @RequestMapping(value = "/",method = RequestMethod.GET)
+//    public String index(Model model){
+//        //model.addAttribute("lagus", laguService.getLagus());
+//        return "index";
+//    }
     
     @RequestMapping(value = "lagu",method = RequestMethod.GET)
     public String lagu(Model model){

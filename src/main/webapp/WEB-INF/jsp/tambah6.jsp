@@ -1,3 +1,9 @@
+<%-- 
+    Document   : tambah6
+    Created on : Nov 8, 2018, 3:03:48 PM
+    Author     : Lenovo
+--%>
+
 <%@page contentType="text/html" pageEncoding="windows-1252"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 
@@ -32,58 +38,43 @@
         </style>
     </head>
     <body>
-        <h1>Tambah Karyawan</h1>
-        <form:form modelAttribute="karyawan" action="${pageContext.request.contextPath}/tambah4" method="post">
+        <h1>Tambah Permohonan</h1>
+        <form:form modelAttribute="permohonan" action="${pageContext.request.contextPath}/tambah6" method="post">
             <table> 
                 <tr>
-                    <td>Nama</td>
+                    <td>Id Karyawan</td>
                     <td>:</td>
-                    <td><form:input path="nama" /></td>
+                    <td><form:input path="idKaryawan" /></td>
                 </tr>
                 <tr>
-                    <td>No Hp</td>
+                    <td>Id Cuti</td>
                     <td>:</td>
-                    <td><form:input path="nohp" /></td>
+                    <td><form:input path="idCuti" /></td>
                 </tr>
                 <tr>
-                    <td>Email</td>
+                    <td>Tanggal Submit</td>
                     <td>:</td>
-                    <td><form:input path="email" /></td>
+                    <td><form:input path="tglSubmit" /></td>
                 </tr>
                 <tr>
-                    <td>Awal Masuk Kerja</td>
+                    <td>Mulai Cuti</td>
                     <td>:</td>
-                    <td><form:input path="awalgbg" /></td>
+                    <td><form:input path="mulaiCuti" /></td>
                 </tr>
                 <tr>
-                    <td>Id Departemen</td>
+                    <td>Selesai Cuti</td>
                     <td>:</td>
-                    <td><form:input path="idDepartemen" /></td>
+                    <td><form:input path="selesaiCuti" /></td>
                 </tr>
                 <tr>
-                    <td>Password</td>
+                    <td>Catatan</td>
                     <td>:</td>
-                    <td><form:input path="katasandi" /></td>
-                </tr>
-                <tr>
-                    <td>Sisa Cuti</td>
-                    <td>:</td>
-                    <td><form:input path="sisacuti" /></td>
-                </tr>
-                <tr>
-                    <td>Banyak Cuti</td>
-                    <td>:</td>
-                    <td><form:input path="bnykcuti" /></td>
+                    <td><form:input path="catatan" /></td>
                 </tr>
                 <tr>
                     <td>Status</td>
                     <td>:</td>
                     <td><form:input path="status" /></td>
-                </tr>
-                <tr>
-                    <td>Id Role</td>
-                    <td>:</td>
-                    <td><form:input path="idDRole" /></td>
                 </tr>
                 <tr>
                     <td><input type="submit" value="Simpan" /></td>
@@ -92,3 +83,4 @@
     </form:form>
     </body>
 </html>
+

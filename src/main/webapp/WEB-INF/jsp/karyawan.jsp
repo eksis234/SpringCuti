@@ -75,8 +75,7 @@
                     <th>No Hp</th>
                     <th>Email</th>
                     <th>Awal Kerja</th>
-                    <th>Id Departemen</th>
-                    <th>Id Manager</th>
+                    <th>Id Dept</th>
                     <th>Password</th>
                     <th>Sisa Cuti</th>
                     <th>Banyak Cuti</th>
@@ -93,13 +92,12 @@
                     <td><c:out value="${karyawan.nohp}" /></td>
                     <td><c:out value="${karyawan.email}" /></td>
                     <td><c:out value="${karyawan.awalgbg}" /></td>
-                    <td><c:out value="${karyawan.iddept}" /></td>
-                    <td><c:out value="${karyawan.idmail}" /></td>
+                    <td><c:out value="${karyawan.idDepartemen.nama}" /></td>
                     <td><c:out value="${karyawan.katasandi}" /></td>
                     <td><c:out value="${karyawan.sisacuti}" /></td>
                     <td><c:out value="${karyawan.bnykcuti}" /></td>
                     <td><c:out value="${karyawan.status}" /></td>
-                    <td><c:out value="${karyawan.idrole}" /></td>
+                    <td><c:out value="${karyawan.idDRole.nama}" /></td>
                     <td><a href="${pageContext.request.contextPath}/edit4/${karyawan.id}">Edit</a> | 
                         <a href="${pageContext.request.contextPath}/delete4/${karyawan.id}">Delete</a>
                     </td>

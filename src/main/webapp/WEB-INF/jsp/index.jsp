@@ -55,11 +55,6 @@
         </style>
     </head>
     <body>   
-        <!-- Lagu -->
-        <h1>Lagu</h1>
-        <div id="buttonTambah">
-            <a href="${pageContext.request.contextPath}/lagu">Lagu</a>
-        </div> 
         <!-- departemen -->
         <h1>Departemen</h1>
         <div id="buttonTambah">
@@ -80,9 +75,10 @@
         <div id="buttonTambah">
             <a href="${pageContext.request.contextPath}/karyawan">Karyawan</a>
         </div>
-        <h1>Berkas Cuti</h1>
+        <!-- Permohonan -->
+        <h1>Permohonan</h1>
         <div id="buttonTambah">
-            <a href="${pageContext.request.contextPath}/berkascuti">Berkas Cuti</a>
+            <a href="${pageContext.request.contextPath}/permohonan">Permohonan</a>
         </div>
     </body>
 </html>
