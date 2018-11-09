@@ -32,12 +32,12 @@ public class BerkasCuti {
         this.idBCuti = idBCuti;
     }
 
-    public JenisCuti getIdJCuti() {
-        return idJCuti;
+    public Permohonan getIdMohonan() {
+        return idMohonan;
     }
 
-    public void setIdJCuti(JenisCuti idJCuti) {
-        this.idJCuti = idJCuti;
+    public void setIdMohonan(Permohonan idMohonan) {
+        this.idMohonan = idMohonan;
     }
 
     public String getLokasiBerkas() {
@@ -47,8 +47,10 @@ public class BerkasCuti {
     public void setLokasiBerkas(String lokasiBerkas) {
         this.lokasiBerkas = lokasiBerkas;
     }
-    @JoinColumn(name = "idJCuti", referencedColumnName = "id")
+    @JoinColumn(name = "idMohonan", referencedColumnName = "idPermohonan")
     @ManyToOne(optional = false)
-    private JenisCuti idJCuti;
+    private Permohonan idMohonan;
     private String lokasiBerkas;
+    
+    
 }

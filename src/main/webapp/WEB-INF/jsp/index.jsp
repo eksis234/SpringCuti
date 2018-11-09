@@ -80,5 +80,10 @@
         <div id="buttonTambah">
             <a href="${pageContext.request.contextPath}/permohonan">Permohonan</a>
         </div>
+        <!-- Berkas Cuti -->
+        <h1>Berkas Cuti</h1>
+        <div id="buttonTambah">
+            <a href="${pageContext.request.contextPath}/bcuti">Berkas Cuti</a>
+        </div>
     </body>
 </html>

@@ -61,31 +61,23 @@
         </style>
     </head>
     <body>
-        <!-- role -->
-               <h1>Role</h1>
-        <div id="buttonTambah">
-            <a href="${pageContext.request.contextPath}/tambah5">Tambah</a>
-        </div>
+        <!-- Berkas Cuti -->
+        <h1>Berkas Cuti</h1>
         
         <table id="table">
             <thead>
                 <tr>
-                    <th>id</th>
-                    <th>id Departemen</th>
-                    <th>lokasi</th>
-                    <th>Opsi</th>
+                    <th>Id</th>
+                    <th>Id Permohonan</th>
+                    <th>Lokasi Berkas</th>
                 </tr>
             </thead>
             <tbody>
                 <c:forEach items="${berkascutis}" var="berkascuti">
                 <tr>
-                    <td><c:out value="${berkascuti.id}" /></td>
-                    <td><c:out value="${berkascuti.idPermohonan}" /></td>
+                    <td><c:out value="${berkascuti.idBCuti}" /></td>
+                    <td><c:out value="${berkascuti.idMohonan.idPermohonan}" /></td>
                     <td><c:out value="${berkascuti.lokasiBerkas}" /></td>
-                    <td><a href="${pageContext.request.contextPath}/edit5/${berkascuti.id}">Edit</a> | 
-                        <a href="${pageContext.request.contextPath}/delete5/${berkascuti.id}">Delete</a> 
-                        
-                    </td>
                 </tr>
                 </c:forEach>
             </tbody>

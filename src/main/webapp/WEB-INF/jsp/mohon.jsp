@@ -61,7 +61,7 @@
         </style>
     </head>
     <body>
-        <h1>Playlist</h1>
+        <h1>Permohonan</h1>
         <div id="buttonTambah">
             <a href="${pageContext.request.contextPath}/tambah6">Tambah</a>
         </div>
@@ -69,7 +69,7 @@
         <table id="table">
             <thead>
                 <tr>
-                    <th>Id Permohonan</th>
+                    <th>Id</th>
                     <th>Nama Karyawan</th>
                     <th>Jenis Cuti</th>
                     <th>Tanggal Submit</th>
