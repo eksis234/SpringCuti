@@ -63,13 +63,16 @@
     <body>
         <!-- Berkas Cuti -->
         <h1>Berkas Cuti</h1>
-        
+        <div id="buttonTambah">
+            <a href="${pageContext.request.contextPath}/tambah5">Tambah</a>
+        </div>
         <table id="table">
             <thead>
                 <tr>
                     <th>Id</th>
                     <th>Id Permohonan</th>
                     <th>Lokasi Berkas</th>
+                    <th>Opsi</th>
                 </tr>
             </thead>
             <tbody>
@@ -78,6 +81,9 @@
                     <td><c:out value="${berkascuti.idBCuti}" /></td>
                     <td><c:out value="${berkascuti.idMohonan.idPermohonan}" /></td>
                     <td><c:out value="${berkascuti.lokasiBerkas}" /></td>
+                    <td><a href="${pageContext.request.contextPath}/edit5/${berkascuti.idBCuti}">Edit</a> | 
+                        <a href="${pageContext.request.contextPath}/delete5/${berkascuti.idBCuti}">Delete</a>
+                    </td>
                 </tr>
                 </c:forEach>
             </tbody>

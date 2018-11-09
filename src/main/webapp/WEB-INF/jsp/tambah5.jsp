@@ -44,12 +44,15 @@
                 <tr>
                     <td>Id Permohonan</td>
                     <td>:</td>
-                    <td><form:input path="idPermohonan" /></td>
+                    <td><form:input path="idMohonan" /></td>
                 </tr>
                 <tr>
                     <td>Lokasi Berkas</td>
                     <td>:</td>
                     <td><form:input path="LokasiBerkas" /></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Simpan" /></td>
                 </tr>
             </table>
     </form:form>

@@ -40,16 +40,19 @@
         <h1>Edit</h1>
         <form:form modelAttribute="berkascuti" action="${pageContext.request.contextPath}/edit5" method="post">
             <table>
-                <form:hidden path="id" />
+                <form:hidden path="idBCuti" />
                 <tr>
                     <td>ID Departemen</td>
                     <td>:</td>
-                    <td><form:input path="idPermohonan" value="${berkascuti.idPermohonan}"/></td>
+                    <td><form:input path="idMohonan" value="${berkascuti.idMohonan.idPermohonan}"/></td>
                 </tr>
                 <tr>
                     <td>Lokasi Berkas</td>
                     <td>:</td>
                     <td><form:input path="lokasiBerkas" value="${berkascuti.lokasiBerkas}" /></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Simpan" /></td>
                 </tr>
             </table>
     </form:form>
