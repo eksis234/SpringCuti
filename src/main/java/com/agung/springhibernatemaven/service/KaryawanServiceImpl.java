@@ -18,7 +18,8 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Service
 @Transactional
-public class KaryawanServiceImpl implements KaryawanService{
+public class KaryawanServiceImpl implements KaryawanService {
+
     @Autowired
     KaryawanDao karyawanDao;
 
@@ -28,7 +29,7 @@ public class KaryawanServiceImpl implements KaryawanService{
 
     @Override
     public List<Karyawan> getKaryawans() {
-     return karyawanDao.getKaryawans();
+        return karyawanDao.getKaryawans();
     }
 
     @Override
@@ -50,6 +51,10 @@ public class KaryawanServiceImpl implements KaryawanService{
     public Karyawan deleteKaryawan(Karyawan karyawan) {
         return karyawanDao.deleteKaryawan(karyawan);
     }
-    
-    
+
+    @Override
+    public Karyawan getByEmail(String email) {
+        return karyawanDao.getByEmail(email);
+    }
+
 }

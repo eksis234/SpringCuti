@@ -7,6 +7,7 @@ package com.agung.springhibernatemaven.dao;
 
 import com.agung.springhibernatemaven.model.Karyawan;
 import com.agung.springhibernatemaven.model.Lagu;
+import org.hibernate.Query;
 import java.util.List;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,5 +50,16 @@ public class KaryawanDaoImpl implements KaryawanDao{
         return karyawan;
     }
     
+    @Override
+    public Karyawan getByEmail(String email) {
+        //return (Karyawan) sessionFactory.getCurrentSession().get(Karyawan.class, email);
+        Karyawan karyawan;
+        List<Karyawan> kar;
+        List list;
+        Query query = sessionFactory.getCurrentSession().createQuery(" from Karyawan k where k.email=:email");
+        query.setParameter("email", email);
+        karyawan = (Karyawan) query.uniqueResult();
+        return (Karyawan) karyawan;
+    }
     
 }

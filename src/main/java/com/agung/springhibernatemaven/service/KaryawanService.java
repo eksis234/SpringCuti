@@ -18,4 +18,5 @@ public interface KaryawanService {
     public Karyawan saveKaryawan(Karyawan karyawan);
     public Karyawan updateKaryawan(Karyawan karyawan);
     public Karyawan deleteKaryawan(Karyawan karyawan);
+    public Karyawan getByEmail(String email);
 }
