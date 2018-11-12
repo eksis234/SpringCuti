@@ -23,7 +23,7 @@ public class BerkasCutiDaoImpl implements BerkasCutiDao{
 
     @Override
     public List<BerkasCuti> getBerkasCutis() {
-        return sessionFactory.getCurrentSession().createQuery("select bc from BerkasCuti bc").list();
+        return sessionFactory.getCurrentSession().createQuery("select l from BerkasCuti l").list();
     }
 
     @Override

@@ -43,14 +43,12 @@ public class BerkasCutiController {
     
     @RequestMapping(value = "tambah5",method = RequestMethod.POST)
     public String adding(@ModelAttribute("berkascuti") BerkasCuti berkasCuti){
-        System.out.println("<br>"+berkasCuti.getLokasiBerkas());
         berkasCutiService.saveBerkasCuti(berkasCuti);
-   
         return "redirect:/bcuti";
     }
     
-    @RequestMapping(value = "edit5/{id}",method = RequestMethod.GET)
-    public String edit(Model model,@PathVariable("id") Integer id){
+    @RequestMapping(value = "edit5/{idBCuti}",method = RequestMethod.GET)
+    public String edit(Model model,@PathVariable("idBCuti") Integer id){
         BerkasCuti berkasCuti = berkasCutiService.getBerkasCuti(id);
         if(berkasCuti==null){
             throw new NotFoundException();
@@ -65,8 +63,8 @@ public class BerkasCutiController {
         return "redirect:/bcuti";
     }
     
-    @RequestMapping(value = "delete5/{id}",method = RequestMethod.GET)
-    public String deleting(@PathVariable("id") Integer id){
+    @RequestMapping(value = "delete5/{idBCuti}",method = RequestMethod.GET)
+    public String deleting(@PathVariable("idBCuti") Integer id){
         BerkasCuti berkasCuti = berkasCutiService.getBerkasCuti(id);
         if(berkasCuti==null){
             throw new NotFoundException();

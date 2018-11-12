@@ -22,7 +22,7 @@ public class PermohonanDaoImpl implements PermohonanDao{
 
     @Override
     public List<Permohonan> getPermohonans() {
-        return sessionFactory.getCurrentSession().createQuery("select p from Permohonan p").list();
+        return sessionFactory.getCurrentSession().createQuery("select l from Permohonan l").list();
     }
 
     @Override
@@ -38,13 +38,13 @@ public class PermohonanDaoImpl implements PermohonanDao{
 
     @Override
     public Permohonan updatePermohonan(Permohonan permohonan) {
-        sessionFactory.getCurrentSession().save(permohonan);
+        sessionFactory.getCurrentSession().update(permohonan);
         return permohonan;
     }
 
     @Override
     public Permohonan deletePermohonan(Permohonan permohonan) {
-        sessionFactory.getCurrentSession().save(permohonan);
+        sessionFactory.getCurrentSession().delete(permohonan);
         return permohonan;
     }
     

@@ -235,10 +235,11 @@
                 <div class="mdl-layout__header-row">
                     <span class="mdl-layout-title">Welcome, ${sessionScope.nama}!</span> || 
                     <a href="${pageContext.request.contextPath}/karyawan">Karyawan</a> ||
-                    <a href="${pageContext.request.contextPath}/jeniscuti">Jenis Cuti</a> ||
-                    <a href="${pageContext.request.contextPath}/lagu">Lagu</a> ||
-                    <a href="${pageContext.request.contextPath}/departemen">Departemen</a> ||
+                    <a href="${pageContext.request.contextPath}/dept">Departemen</a> ||
                     <a href="${pageContext.request.contextPath}/role">Role</a> ||
+                    <a href="${pageContext.request.contextPath}/jcuti">Jenis Cuti</a> ||
+                    <a href="${pageContext.request.contextPath}/permohonan">Permohonan</a> ||
+                    <a href="${pageContext.request.contextPath}/bcuti">Berkas Cuti</a> ||
                     <div class="mdl-layout-spacer"></div>
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
                         <label class="mdl-button mdl-js-button mdl-button--icon" for="search">

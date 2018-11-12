@@ -51,8 +51,8 @@ public class PermohonanController {
         return "redirect:/permohonan";
     }
     
-    @RequestMapping(value = "edit6/{id}",method = RequestMethod.GET)
-    public String edit(Model model,@PathVariable("id") Integer id){
+    @RequestMapping(value = "edit6/{idPermohonan}",method = RequestMethod.GET)
+    public String edit(Model model,@PathVariable("idPermohonan") Integer id){
         Permohonan permohonan = permohonanService.getPermohonan(id);
         if(permohonan==null){
             throw new NotFoundException();
@@ -67,8 +67,8 @@ public class PermohonanController {
         return "redirect:/permohonan";
     }
     
-    @RequestMapping(value = "delete6/{id}",method = RequestMethod.GET)
-    public String deleting(@PathVariable("id") Integer id){
+    @RequestMapping(value = "delete6/{idPermohonan}",method = RequestMethod.GET)
+    public String deleting(@PathVariable("idPermohonan") Integer id){
         Permohonan permohonan = permohonanService.getPermohonan(id);
         if(permohonan==null){
             throw new NotFoundException();

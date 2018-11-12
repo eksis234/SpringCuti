@@ -33,7 +33,7 @@
     </head>
     <body>
         <h1>Tambah Karyawan</h1>
-        <form:form modelAttribute="karyawan" action="${pageContext.request.contextPath}/tambah4" method="post">
+        <form:form modelAttribute="karyawan" action="${pageContext.request.contextPath}/tambahKaryawan" method="post">
             <table> 
                 <tr>
                     <td>Nama</td>
