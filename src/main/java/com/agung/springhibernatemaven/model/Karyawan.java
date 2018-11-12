@@ -45,11 +45,11 @@ public class Karyawan {
     }
 
     public Role getIdDRole() {
-        return idDRole;
+        return idRole;
     }
 
-    public void setIdDRole(Role idDRole) {
-        this.idDRole = idDRole;
+    public void setIdDRole(Role idRole) {
+        this.idRole = idRole;
     }
     private String katasandi;
     private Integer sisacuti;
@@ -57,7 +57,7 @@ public class Karyawan {
     private String status;
     @JoinColumn(name = "idDRole", referencedColumnName = "id")
     @ManyToOne(optional = false)
-    private Role idDRole;
+    private Role idRole;
 
     public Integer getId() {
         return id;
